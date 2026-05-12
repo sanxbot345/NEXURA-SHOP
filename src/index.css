@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-nexura: #00F0FF;
+  --color-nexura-dark: #00B3CC;
+}
+
+/* Hide scrollbar for slider/carousel */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  @apply bg-[#05060f] text-slate-100 antialiased;
+}
+
+/* Light Theme Overrides */
+.light-theme body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+.light-theme [class*="bg-[#0f1225]"],
+.light-theme [class*="bg-[#151a30]"],
+.light-theme [class*="bg-[#0a0c1a]"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+.light-theme [class*="bg-slate-800"] {
+  background-color: #f1f5f9 !important;
+}
+.light-theme [class*="text-white"]:not([class*="bg-cyan-"]) {
+  color: #0f172a !important;
+}
+.light-theme [class*="text-slate-400"],
+.light-theme [class*="text-slate-500"] {
+  color: #64748b !important;
+}
+.light-theme [class*="border-white/5"],
+.light-theme [class*="border-white/10"] {
+  border-color: #e2e8f0 !important;
+}
+
+/* Disable Animations */
+.disable-animations *,
+.disable-animations *::before,
+.disable-animations *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
